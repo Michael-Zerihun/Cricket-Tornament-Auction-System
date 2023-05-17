@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/task2.css">
+    <script src="./js/task2.js"></script>
+    <title>Document</title>
+</head>
+<body onload="Suggest()">
+    <div>
+        <table id="playAuction" >
+            <tr id="head1">
+                <th colspan="9" rowspan="2" id="head">Department of ICT <br>Cricket Tornament Auction System</th>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <th colspan="2" rowspan="4" id="any"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>.</td>
+            </tr>
+            <tr>
+                <td>Player Name:</td>
+                <td><input type="text" id="newplayer"></td>
+                <td>Type:</td>
+                <td><select name="type" id="type">
+                        <option value="Allrounder">Allrounder</option>
+                        <option value="Bowler">Bowler</option>
+                        <option value="Wicketkeeper">Wicketkeeper</option>
+                        <option value="Batsman">Batsman</option>
+                    </select>
+                </td>
+                <td>Base Price:</td>
+                <td><input type="text" id="bsp"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><button onclick="AddPlayer(this)">Add Player</button></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>.</td>
+            </tr>
+            <tr>
+                <th colspan="4" rowspan="2" id="all">All Available Players</th>
+                <th colspan="5" id="slp">Selected Players</th>
+                
+            </tr>
+            <tr>
+                
+                <th>Team</th>
+                <th>Team-A</th>
+                <th>Team-B</th>
+                <th>Team-C</th>
+                <th>Team-D</th>
+            </tr>
+            <tr>
+                <th>Player Name</th>
+                <th>Type</th>
+                <th>Base Price</th>
+                <th>Auction</th>
+                
+                <th>Total Amount</th>
+                <td id="aBalance">500000</td>
+                <td id="bBalance">500000</td>
+                <td id="cBalance">500000</td>
+                <td id="dBalance">500000</td>
+            </tr>
+            <tr>
+                <td>ABC</td>
+                <td>Batsman</td>
+                <td>2500</td>
+                <td><button onclick="SelectPlayer(this)">Select for Auction</button></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>DEF</td>
+                <td>Allrounder</td>
+                <td>4000</td>
+                <td><button onclick="SelectPlayer(this)">Select for Auction</button></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+            </tr>
+            <tr>
+                <td>PQR</td>
+                <td>Bowler</td>
+                <td>3000</td>
+                <td><button onclick="SelectPlayer(this)">Select for Auction</button></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+            </tr>
+            <tr>
+                <td>XYZ</td>
+                <td>Wicketkeeper</td>
+                <td>3000</td>
+                <td><button onclick="SelectPlayer(this)">Select for Auction</button></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+            </tr>
+            <tr>
+                <th rowspan="4" id="AuA">Auction Area</th>
+                <td>Player Name:</td>
+                <td><input type="text" id="pn1"></td>
+                <td>Type:</td>
+                <td><select name="type" id="pt1">
+                        <option value="Allrounder">Allrounder</option>
+                        <option value="Bowler">Bowler</option>
+                        <option value="Wicketkeeper">Wicketkeeper</option>
+                        <option value="Batsman">Batsman</option>
+                </select>
+                </td>
+                <td>Base Price:</td>
+                <td><input type="text" id="pb1"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Team</th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>D</th>
+                <td rowspan="2"><button id="auction" onclick="Bid(this)">Auction</button></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Bid Amount</td>
+                <td><input type="text" id="a"></td>
+                <td><input type="text" id="b"></td>
+                <td><input type="text" id="c"></td>
+                <td><input type="text" id="d"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>.</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+
+    <div class="ko">
+        <button id="safe" onclick="Disable(this)">Safe Mode</button>
+        <button id="normal" onclick="Disable(this)">Normal Mode</button>
+    </div>
+    <div id="own">
+        <table id="sold">
+            <tr>
+                <th id="tmA">Team-A</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th id="tmB">Team-B</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th id="tmC">Team-C</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th id="tmD">Team-D</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+body {
+    background-image: url("../image/cricket-banner-championship-background-poster-template-flyer-banner-free-vector_auto_x2.jpg");
+    background-size: 100%;
+    font-weight: bold;
+}
+table, td, th{
+    border-spacing: 0px;
+    width: 90%;
+    margin: auto;
+}
+
+td,th {
+    border: 1px solid rgb(136, 4, 136);
+    width: 11.1%;
+    border-top: 0ch;
+}
+td{
+    background-color: rgba(224, 248, 90, 0.76);
+}
+th {
+    background-color: rgba(51, 255, 78, 0.836);
+}
+
+#any {
+    background-image: url("../image/hhh.jpg");
+    background-size: 280px;
+    padding-bottom: 10px;
+}
+input {
+    width: 97%;
+    height: 18px;
+    border: 0px;
+    background-color: blue;
+}
+button {
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.644);
+    border-width: 1px;
+    border-color: rgb(240, 72, 60);
+}
+button:active {
+    animation-name: btnClick;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+@keyframes btnClick {
+    0%{background-color: rgb(225, 0, 255);}
+    100%{background-color: rgb(225, 0, 255);}
+}
+#pn1, #pt1, #pb1 {
+    color: black;
+}
+#auction {
+    width: 100%;
+    height: 41px;
+    border-width: 1px;
+    font-size: larger;
+    font-weight: 200;
+}
+select {
+    background-color: orange;
+    width: 100%;
+    height: 20px;
+}
+#head, #all, #slp, #AuA {
+    background-color: rgba(25, 228, 255, 0.801);
+}
+#head {
+    border-radius: 20px 20px 0px 0px;
+}
+#safe, #normal {
+    width: 8em;
+    height: 30px;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: bold;
+    background-color: rgb(0, 255, 106);
+    border: 0ch;
+}
+
+#safe {
+    margin-left: 63em;
+    margin-right: 1em;   
+}
+
+#safe:active {
+    animation-name: click;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+@keyframes  click {
+    0%{background-color: green;}
+    100%{background-color: green;}
+}
+
+#normal:active {
+    animation-name: normalBtn;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+}
+@keyframes normalBtn {
+    0%{background-color: rebeccapurple;}
+    100%{background-color: rebeccapurple;}
+}
+#own {
+    width: 60%;
+    margin-top: -40px;
+}
+#sold{
+    margin: 10%;
+}
+#tmA, #tmB, #tmC, #tmD {
+    background-color: rgb(255, 102, 0);
+}
+#sold td {
+    background-color: rgba(213, 140, 255, 0.788);
+}
